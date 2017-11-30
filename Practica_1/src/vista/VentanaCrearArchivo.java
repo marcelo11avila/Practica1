@@ -44,7 +44,7 @@ public class VentanaCrearArchivo extends JFrame{
         super("Crear Archivo");
         this.gD=gD;
         this.iniciaComponentes();
-        this.setLocation(325, 0);
+        this.setLocation(325, 50);
         this.setSize(325, 325);
     }
      public void iniciaComponentes()

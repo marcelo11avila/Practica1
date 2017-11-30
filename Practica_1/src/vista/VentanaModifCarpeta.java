@@ -41,10 +41,10 @@ public class VentanaModifCarpeta extends JFrame{
     private JScrollPane scroll;
 
     public VentanaModifCarpeta(GestionDato gD) {
-        super("Crear Carpeta");
+        super("Modificar Carpeta");
         this.gD=gD;
         this.iniciaComponentes();
-        
+        this.setLocation(650, 50);
         this.setSize(325, 325);
     }
 
@@ -81,7 +81,7 @@ public class VentanaModifCarpeta extends JFrame{
         
         this.encabezado = new Object[2];
         this.encabezado[0] = "carpeta Modificada Ruta";
-        this.encabezado[1] = "Nombre carpeta";
+        this.encabezado[1] = "nombre carpeta";
         
         this.datos = this.cargaDatosTabla(this.gD.getCrearCarpetaList().size(),2);
         this.modeloTabla = new DefaultTableModel(this.datos,this.encabezado);

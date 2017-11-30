@@ -44,7 +44,7 @@ public class VentanaCrearCarpeta extends JFrame{
         super("Crear Carpeta");
         this.gD=gD;
         this.iniciaComponentes();
-        
+        this.setLocation(0, 50);
         this.setSize(325, 325);
     }
      public void iniciaComponentes()
