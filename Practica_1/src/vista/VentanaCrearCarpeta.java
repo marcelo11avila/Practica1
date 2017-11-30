@@ -26,7 +26,7 @@ import javax.swing.table.DefaultTableModel;
  * @author Estudiante
  */
 public class VentanaCrearCarpeta extends JInternalFrame{
-     private List<JLabel> etiList;
+    private List<JLabel> etiList;
     private List<JTextField> txtList;
     private JButton boton1;
     private JButton boton2;
@@ -60,7 +60,7 @@ public class VentanaCrearCarpeta extends JInternalFrame{
         
         LayoutManager disenioPrincipal = new BorderLayout();
         this.panelPrincipal = new JPanel(disenioPrincipal);
-        LayoutManager disenioSup = new GridLayout(6,2);
+        LayoutManager disenioSup = new GridLayout(5,2);
         JPanel panelSup = new JPanel(disenioSup);
         
         for(int i=0;i<2;i++)

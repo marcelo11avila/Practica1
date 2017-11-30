@@ -7,6 +7,7 @@ package controlador;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import vista.VentanaCrearArchivo;
 import vista.VentanaCrearCarpeta;
 import vista.VentanaInicial;
 
@@ -35,6 +36,11 @@ public class EventoVentanaInicial implements ActionListener{
             VentanaCrearCarpeta vCC = new  VentanaCrearCarpeta(this.ventanaInicial.getgD());
             vCC.setVisible(true);
             this.ventanaInicial.getEscritorio().add(vCC);
+        }
+        if(ae.getSource().equals(this.ventanaInicial.getMenuItemList().get(1))){
+            VentanaCrearArchivo vCA = new  VentanaCrearArchivo(this.ventanaInicial.getgD());
+            vCA.setVisible(true);
+            this.ventanaInicial.getEscritorio().add(vCA);
         }
     }
     
