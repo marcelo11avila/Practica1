@@ -20,7 +20,7 @@ import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.JTextField;
 import javax.swing.table.DefaultTableModel;
-import modelo.CrearArchivo;
+import modelo.Archivo;
 
 /**
  *
@@ -96,7 +96,7 @@ public class VentanaCrearArchivo extends JInternalFrame{
     {
          Object[][] retorno= new Object[h][w];
         int i=0;
-        for(CrearArchivo cA:this.gD.getCrearArchivoList())
+        for(Archivo cA:this.gD.getCrearArchivoList())
         {
             retorno[i][0]=cA.getCarpetaDestino()+":/";
             retorno[i][1]=cA.getNombreArchivo()+"/";

@@ -9,11 +9,11 @@ package modelo;
  *
  * @author Estudiante
  */
-public class CrearCarpeta {
+public class Carpeta {
     private String carpetaDestino;
     private String nombreCarpeta;
 
-    public CrearCarpeta(String carpetaDestino, String nombreCarpeta) {
+    public Carpeta(String carpetaDestino, String nombreCarpeta) {
         this.carpetaDestino = carpetaDestino;
         this.nombreCarpeta = nombreCarpeta;
     }

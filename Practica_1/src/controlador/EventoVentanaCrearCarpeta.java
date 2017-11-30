@@ -7,7 +7,8 @@ package controlador;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import modelo.CrearCarpeta;
+import java.io.File;
+import modelo.Carpeta;
 import vista.VentanaCrearCarpeta;
 
 /**
@@ -36,8 +37,12 @@ public class EventoVentanaCrearCarpeta implements ActionListener{
         String cD = this.ventanaCrearCarpeta.getTxtList().get(0).getText();
         String nC = this.ventanaCrearCarpeta.getTxtList().get(1).getText();
             
-        CrearCarpeta cC = new CrearCarpeta(cD, nC);
-            
+        Carpeta cC = new Carpeta(cD, nC);
+        
+        File directorio=new File(cD+"\\"+nC);
+        if(!directorio.exists()){
+        directorio.mkdir();
+        }    
         this.ventanaCrearCarpeta.getgD().addcrearCarpeta(cC);    
         
         Object [][] dato1=this.ventanaCrearCarpeta.cargaDatosTabla(this.ventanaCrearCarpeta.getgD().getCrearCarpetaList().size(),2);

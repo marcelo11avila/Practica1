@@ -20,7 +20,7 @@ import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.JTextField;
 import javax.swing.table.DefaultTableModel;
-import modelo.CrearCarpeta;
+import modelo.Carpeta;
 
 /**
  *
@@ -93,10 +93,10 @@ public class VentanaCrearCarpeta extends JInternalFrame{
     {
          Object[][] retorno= new Object[h][w];
         int i=0;
-        for(CrearCarpeta cC:this.gD.getCrearCarpetaList())
+        for(Carpeta cC:this.gD.getCrearCarpetaList())
         {
             retorno[i][0]=cC.getCarpetaDestino();
-            retorno[i][1]=":/"+cC.getNombreCarpeta()";
+            retorno[i][1]=":/"+cC.getNombreCarpeta();
             
             i++;
         }        

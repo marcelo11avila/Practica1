@@ -7,7 +7,9 @@ package controlador;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import modelo.CrearArchivo;
+import java.io.File;
+import java.io.IOException;
+import modelo.Archivo;
 import vista.VentanaCrearArchivo;
 
 /**
@@ -35,7 +37,16 @@ public class EventoVentanaCrearArchivo implements ActionListener{
         String nA = this.ventanaCrearArchivo.getTxtList().get(1).getText();
         String tA = this.ventanaCrearArchivo.getTxtList().get(2).getText();
         
-        CrearArchivo cA = new CrearArchivo(cD, nA, tA);
+        File nuevoArchivo= new File(cD+"\\"+nA+"."+tA);
+        if(!nuevoArchivo.exists()){
+        try{
+            nuevoArchivo.createNewFile();
+        }
+        catch(IOException ex){
+            System.out.println("Error al crear arhivo"+ex.getMessage());
+        }
+        }
+        Archivo cA = new Archivo(cD, nA, tA);
             
         this.ventanaCrearArchivo.getgD().addcrearArchivo(cA);    
         

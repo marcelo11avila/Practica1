@@ -11,14 +11,15 @@ public class Leer {
 
     private File directorio;
     private File[] lista;
+    private String nombre;
 
     public Leer() {
-        this.inicia();
+        this.inicia(nombre);
         this.recorrer();
     }
 
-    public void inicia() {
-        this.directorio = new File("C:\\Users\\Estudiante\\Desktop\\a");
+    public void inicia(String nombre) {
+        this.directorio = new File("C:\\Users\\EstebanRM\\Desktop\\Esteban\\universidad\\"+nombre);
         this.lista = directorio.listFiles();
     }
     
@@ -37,4 +38,10 @@ public class Leer {
             comparar(x);
         }
     }
+    
+   
+    
+    
+        
+ 
 }

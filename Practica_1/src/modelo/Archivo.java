@@ -9,12 +9,12 @@ package modelo;
  *
  * @author Estudiante
  */
-public class CrearArchivo {
+public class Archivo {
     private String carpetaDestino;
     private String nombreArchivo;
     private String tipoArchivo;
 
-    public CrearArchivo(String carpetaDestino, String nombreArchivo, String tipoArchivo) {
+    public Archivo(String carpetaDestino, String nombreArchivo, String tipoArchivo) {
         this.carpetaDestino = carpetaDestino;
         this.nombreArchivo = nombreArchivo;
         this.tipoArchivo = tipoArchivo;
