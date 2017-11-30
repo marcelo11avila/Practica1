@@ -25,7 +25,7 @@ import modelo.Carpeta;
 
 /**
  *
- * @author Estudiante
+ * @author Marcelo11
  */
 public class VentanaCrearCarpeta extends JFrame{
     private List<JLabel> etiList;

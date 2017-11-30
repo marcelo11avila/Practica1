@@ -18,7 +18,7 @@ import javax.swing.JMenuItem;
 
 /**
  *
- * @author Estudiante
+ * @author Marcelo11
  */
 public class VentanaInicial extends JFrame{
     private JDesktopPane escritorio;

@@ -25,7 +25,7 @@ import modelo.Archivo;
 
 /**
  *
- * @author Estudiante
+ * @author Marcelo11
  */
 public class VentanaCrearArchivo extends JFrame{
     private List<JLabel> etiList;

@@ -7,7 +7,7 @@ package modelo;
 
 /**
  *
- * @author Estudiante
+ * @author Marcelo11
  */
 public class Archivo {
     private String carpetaDestino;

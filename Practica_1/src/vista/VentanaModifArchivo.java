@@ -50,7 +50,7 @@ public class VentanaModifArchivo extends JFrame{
         this.setSize(325, 325);
     }
     
-     public void iniciaComponentes()
+    public void iniciaComponentes()
     {
         this.etiList = new ArrayList<JLabel>();
         this.etiList.add(new JLabel("Carpeta Destino"));
@@ -96,9 +96,9 @@ public class VentanaModifArchivo extends JFrame{
         
         this.add(this.panelPrincipal);
     }
-      public Object[][] cargaDatosTabla(int h, int w)
+    public Object[][] cargaDatosTabla(int h, int w)
     {
-         Object[][] retorno= new Object[h][w];
+        Object[][] retorno= new Object[h][w];
         int i=0;
         for(Archivo cA:this.gD.getCrearArchivoList())
         {

@@ -15,7 +15,7 @@ import vista.VentanaModifCarpeta;
 
 /**
  *
- * @author Estudiante
+ * @author Marcelo11
  */
 public class EventoVentanaInicial implements ActionListener{
     private VentanaInicial ventanaInicial;

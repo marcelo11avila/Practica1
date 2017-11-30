@@ -13,7 +13,7 @@ import vista.VentanaCrearCarpeta;
 
 /**
  *
- * @author Estudiante
+ * @author Marcelo11
  */
 public class EventoVentanaCrearCarpeta implements ActionListener {
 

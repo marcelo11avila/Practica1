@@ -43,6 +43,7 @@ public class EventoVentanaModifArchivo implements ActionListener {
         // antiguoArchivo.renameTo(nuevoArchivo);
         
         
+        
         Archivo cA = new Archivo(cD, nA, tA);
             
         this.ventanaModifArchivo.getgD().addcrearArchivo(cA);    

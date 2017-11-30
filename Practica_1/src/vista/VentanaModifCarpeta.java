@@ -96,9 +96,9 @@ public class VentanaModifCarpeta extends JFrame{
         this.add(this.panelPrincipal);
     }
     
-     public Object[][] cargaDatosTabla(int h, int w)
+    public Object[][] cargaDatosTabla(int h, int w)
     {
-         Object[][] retorno= new Object[h][w];
+        Object[][] retorno= new Object[h][w];
         int i=0;
         for(Carpeta cC:this.gD.getCrearCarpetaList())
         {

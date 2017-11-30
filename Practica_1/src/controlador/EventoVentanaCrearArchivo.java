@@ -14,7 +14,7 @@ import vista.VentanaCrearArchivo;
 
 /**
  *
- * @author Estudiante
+ * @author Marcelo11
  */
 public class EventoVentanaCrearArchivo implements ActionListener{
     private VentanaCrearArchivo ventanaCrearArchivo;

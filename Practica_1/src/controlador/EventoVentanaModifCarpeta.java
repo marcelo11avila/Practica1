@@ -50,8 +50,7 @@ public class EventoVentanaModifCarpeta implements ActionListener{
 
             Object[][] dato1 = this.ventanaModifCarpeta.cargaDatosTabla(this.ventanaModifCarpeta.getgD().getCrearCarpetaList().size(), 2);
             this.ventanaModifCarpeta.setDatos(dato1);
-            this.ventanaModifCarpeta.getModeloTabla().setDataVector(this.ventanaModifCarpeta.getDatos(), this.ventanaModifCarpeta.getEncabezado());
-        
+            this.ventanaModifCarpeta.getModeloTabla().setDataVector(this.ventanaModifCarpeta.getDatos(), this.ventanaModifCarpeta.getEncabezado());       
            
             
         }
