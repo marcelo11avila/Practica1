@@ -5,6 +5,7 @@
  */
 package vista;
 
+import controlador.EventoVentanaInicial;
 import controlador.GestionDato;
 import java.awt.HeadlessException;
 import java.util.ArrayList;
@@ -75,6 +76,14 @@ public class VentanaInicial extends JFrame{
         this.menu3.add(this.menuItemList.get(5));
         
         this.barraMenu.add(menu4);
+        
+        this.menuItemList.get(0).addActionListener(new EventoVentanaInicial(this));
+        this.menuItemList.get(1).addActionListener(new EventoVentanaInicial(this));
+        this.menuItemList.get(2).addActionListener(new EventoVentanaInicial(this));
+        this.menuItemList.get(3).addActionListener(new EventoVentanaInicial(this));
+        this.menuItemList.get(4).addActionListener(new EventoVentanaInicial(this));
+        this.menuItemList.get(5).addActionListener(new EventoVentanaInicial(this));
+        
     }
 
     public JDesktopPane getEscritorio() {
