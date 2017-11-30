@@ -27,6 +27,7 @@ import modelo.Archivo;
  *
  * @author Marcelo11
  */
+
 public class VentanaCrearArchivo extends JFrame{
     private List<JLabel> etiList;
     private List<JTextField> txtList;

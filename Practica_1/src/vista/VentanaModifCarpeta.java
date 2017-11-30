@@ -27,6 +27,7 @@ import modelo.Carpeta;
  *
  * @author EstebanRM
  */
+
 public class VentanaModifCarpeta extends JFrame{
     private List<JLabel> etiList;
     private List<JTextField> txtList;

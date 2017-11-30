@@ -9,6 +9,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
 import java.io.IOException;
+import javax.swing.JOptionPane;
 import modelo.Archivo;
 import vista.VentanaCrearArchivo;
 
@@ -39,12 +40,12 @@ public class EventoVentanaCrearArchivo implements ActionListener{
         
         File nuevoArchivo= new File(cD+"\\"+nA+"."+tA);
         if(!nuevoArchivo.exists()){
-        try{
-            nuevoArchivo.createNewFile();
-        }
-        catch(IOException ex){
-            System.out.println("Error al crear arhivo"+ex.getMessage());
-        }
+            try{
+                nuevoArchivo.createNewFile();
+            }
+            catch(IOException ex){
+                JOptionPane.showMessageDialog(null, "Error al crear arhivo"+ex.getMessage());
+            }
         }
         Archivo cA = new Archivo(cD, nA, tA);
             

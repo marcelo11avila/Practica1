@@ -9,6 +9,7 @@ package modelo;
  *
  * @author Marcelo11
  */
+
 public class Archivo {
     private String carpetaDestino;
     private String nombreArchivo;

@@ -52,7 +52,4 @@ public class EventoVentanaModifArchivo implements ActionListener {
         this.ventanaModifArchivo.setDatos(dato2);
         this.ventanaModifArchivo.getModeloTabla().setDataVector(this.ventanaModifArchivo.getDatos(),this.ventanaModifArchivo.getEncabezado());
     }
-    
-    
-    
 }

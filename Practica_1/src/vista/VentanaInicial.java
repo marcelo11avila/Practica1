@@ -20,6 +20,7 @@ import javax.swing.JMenuItem;
  *
  * @author Marcelo11
  */
+
 public class VentanaInicial extends JFrame{
     private JDesktopPane escritorio;
     private JMenuBar barraMenu;
@@ -33,7 +34,7 @@ public class VentanaInicial extends JFrame{
 
     public VentanaInicial(GestionDato gD) throws HeadlessException {
         super("Practica_1");
-        this.setSize(3000, 780);
+        this.setSize(1366, 730);
         this.setDefaultCloseOperation(3);
         this.gD=gD;
         this.iniciaComponentes();

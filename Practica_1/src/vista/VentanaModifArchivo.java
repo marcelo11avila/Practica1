@@ -29,6 +29,7 @@ import modelo.Archivo;
  *
  * @author EstebanRM
  */
+
 public class VentanaModifArchivo extends JFrame{
     private List<JLabel> etiList;
     private List<JTextField> txtList;
