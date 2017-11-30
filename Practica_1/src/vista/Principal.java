@@ -6,6 +6,10 @@
 package vista;
 
 import controlador.GestionDato;
+import java.util.ArrayList;
+import java.util.List;
+import modelo.CrearArchivo;
+import modelo.CrearCarpeta;
 
 /**
  *
@@ -18,7 +22,10 @@ public class Principal {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        GestionDato gD = new GestionDato();
+        List<CrearCarpeta> cC = new ArrayList<CrearCarpeta>();
+        List<CrearArchivo> cA = new ArrayList<CrearArchivo>();
+        
+        GestionDato gD = new GestionDato(cC, cA);
         VentanaInicial vI = new VentanaInicial(gD);
         vI.setVisible(true);
     }
