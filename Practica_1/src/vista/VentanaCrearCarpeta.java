@@ -95,8 +95,8 @@ public class VentanaCrearCarpeta extends JInternalFrame{
         int i=0;
         for(CrearCarpeta cC:this.gD.getCrearCarpetaList())
         {
-            retorno[i][0]=cC.getCarpetaDestino();
-            retorno[i][1]=cC.getNombreCarpeta();
+            retorno[i][0]=cC.getCarpetaDestino()+":/";
+            retorno[i][1]=cC.getNombreCarpeta()+"/";
             
             i++;
         }        

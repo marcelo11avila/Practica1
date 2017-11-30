@@ -7,6 +7,7 @@ package controlador;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import modelo.CrearArchivo;
 import vista.VentanaCrearArchivo;
 
 /**
@@ -30,7 +31,17 @@ public class EventoVentanaCrearArchivo implements ActionListener{
     
     @Override
     public void actionPerformed(ActionEvent ae) {
+        String cD = this.ventanaCrearArchivo.getTxtList().get(0).getText();
+        String nA = this.ventanaCrearArchivo.getTxtList().get(1).getText();
+        String tA = this.ventanaCrearArchivo.getTxtList().get(2).getText();
         
+        CrearArchivo cA = new CrearArchivo(cD, nA, tA);
+            
+        this.ventanaCrearArchivo.getgD().addcrearArchivo(cA);    
+        
+        Object [][] dato2=this.ventanaCrearArchivo.cargaDatosTabla(this.ventanaCrearArchivo.getgD().getCrearArchivoList().size(),3);
+        this.ventanaCrearArchivo.setDatos(dato2);
+        this.ventanaCrearArchivo.getModeloTabla().setDataVector(this.ventanaCrearArchivo.getDatos(),this.ventanaCrearArchivo.getEncabezado());
     }
     
 }
