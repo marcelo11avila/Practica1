@@ -5,7 +5,6 @@
  */
 package vista;
 
-
 import controlador.EventoVentanaModifArchivo;
 import controlador.GestionDato;
 import java.awt.BorderLayout;
@@ -29,8 +28,8 @@ import modelo.Archivo;
  *
  * @author EstebanRM
  */
+public class VentanaModifArchivo extends JFrame {
 
-public class VentanaModifArchivo extends JFrame{
     private List<JLabel> etiList;
     private List<JTextField> txtList;
     private JButton boton1;
@@ -44,73 +43,58 @@ public class VentanaModifArchivo extends JFrame{
     private JScrollPane scroll;
 
     public VentanaModifArchivo(GestionDato gD) {
-         super("Crear Archivo");
-        this.gD=gD;
+        super("Modificar Archivo");
+        this.gD = gD;
         this.iniciaComponentes();
         this.setLocation(325, 0);
         this.setSize(325, 325);
     }
-    
-    public void iniciaComponentes()
-    {
+
+    public void iniciaComponentes() {
         this.etiList = new ArrayList<JLabel>();
         this.etiList.add(new JLabel("Carpeta Destino"));
-        this.etiList.add(new JLabel("Nombre Archivo"));
-        this.etiList.add(new JLabel("Tipo de Archivo"));
-      
-        this.txtList= new ArrayList<JTextField>();
+        this.etiList.add(new JLabel("Nombre nuevo"));
+
+        this.txtList = new ArrayList<JTextField>();
         this.txtList.add(new JTextField());
         this.txtList.add(new JTextField());
-        this.txtList.add(new JTextField());
-        
-        this.boton1 = new JButton("Crear");
-        this.boton2 = new JButton("Limpriar");
-        
-        LayoutManager disenioPrincipal = new BorderLayout();
-        this.panelPrincipal = new JPanel(disenioPrincipal);
-        LayoutManager disenioSup = new GridLayout(4,2);
+
+        this.boton1 = new JButton("Modificar");
+        this.boton2 = new JButton("Limpiar");
+
+        LayoutManager disenioSup = new GridLayout(5, 1);
+        LayoutManager disenioBoton=new GridLayout(1,2);
         JPanel panelSup = new JPanel(disenioSup);
-        
-        for(int i=0;i<3;i++)
+        JPanel panelBotones = new JPanel(disenioBoton);
+
+         for(int i=0;i<2;i++)
         {
             panelSup.add(this.etiList.get(i));
             panelSup.add(this.txtList.get(i));
         }
-        
-        panelSup.add(this.boton1);
-        panelSup.add(this.boton2);
-        this.panelPrincipal.add(panelSup,BorderLayout.NORTH);
-        
-        this.encabezado = new Object[3];
-        this.encabezado[0] = "carpeta destino";
-        this.encabezado[1] = "nombre archivo";
-        this.encabezado[2] = "tipo archivo";
-        
-        this.datos = this.cargaDatosTabla(this.gD.getCrearArchivoList().size(),3);
-        this.modeloTabla = new DefaultTableModel(this.datos,this.encabezado);
-        this.tabla = new JTable(modeloTabla);
-        this.scroll = new JScrollPane(tabla);
-        
-        this.panelPrincipal.add(this.scroll,BorderLayout.CENTER);
-        
+
+        panelBotones.add(this.boton1);
+        panelBotones.add(this.boton2);
+
         this.boton1.addActionListener(new EventoVentanaModifArchivo(this));
-        
-        this.add(this.panelPrincipal);
+        this.boton2.addActionListener(new EventoVentanaModifArchivo(this));
+        panelSup.add(panelBotones);
+
+        this.add(panelSup);
     }
-    public Object[][] cargaDatosTabla(int h, int w)
-    {
-        Object[][] retorno= new Object[h][w];
-        int i=0;
-        for(Archivo cA:this.gD.getCrearArchivoList())
-        {
-            retorno[i][0]=cA.getCarpetaDestino()+":/";
-            retorno[i][1]=cA.getNombreArchivo()+"/";
-            retorno[i][2]=cA.getTipoArchivo();
-            
+
+    public Object[][] cargaDatosTabla(int h, int w) {
+        Object[][] retorno = new Object[h][w];
+        int i = 0;
+        for (Archivo cA : this.gD.getCrearArchivoList()) {
+            retorno[i][0] = cA.getCarpetaDestino() + ":/";
+            retorno[i][1] = cA.getNombreArchivo() + "/";
+            retorno[i][2] = cA.getTipoArchivo();
+
             i++;
-        }        
+        }
         return retorno;
-       
+
     }
 
     public List<JLabel> getEtiList() {
@@ -201,7 +185,4 @@ public class VentanaModifArchivo extends JFrame{
         this.scroll = scroll;
     }
 
-   
-    
-    
 }

@@ -59,7 +59,7 @@ public class VentanaModifCarpeta extends JFrame{
         this.txtList.add(new JTextField());
         this.txtList.add(new JTextField());
        
-        this.boton1 = new JButton("Crear");
+        this.boton1 = new JButton("Modificar");
         this.boton2 = new JButton("Limpiar");
         
         LayoutManager disenioPrincipal = new BorderLayout();

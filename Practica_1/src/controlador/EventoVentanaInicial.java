@@ -52,6 +52,11 @@ public class EventoVentanaInicial implements ActionListener{
             vMC.setVisible(true);
            
         }
+        if(ae.getSource().equals(this.ventanaInicial.getMenuItemList().get(3))){
+            VentanaModifArchivo vMa = new  VentanaModifArchivo(this.ventanaInicial.getgD());
+            vMa.setVisible(true);
+           
+        }
        if(ae.getSource().equals(this.ventanaInicial.getMenuItemList().get(4))){
             VentanaBorrarCarpeta_1 vB = new VentanaBorrarCarpeta_1(this.ventanaInicial.getgD());
             vB.setVisible(true);
