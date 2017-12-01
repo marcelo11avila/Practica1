@@ -58,7 +58,7 @@ public class VentanaInicial extends JFrame{
         this.menuItemList.add(new JMenuItem("Borrar Carpeta"));
         this.menuItemList.add(new JMenuItem("Borrar Archivo"));    
         
-        this.menu4= new JMenu("Actualizar");
+        this.menu4= new JMenu("Mostrar");
         
         this.setContentPane(escritorio);
         this.setJMenuBar(barraMenu);
