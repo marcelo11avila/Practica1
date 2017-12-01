@@ -34,10 +34,11 @@ public class EventoVentanaArbol implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent e) {
         if(e.getSource().equals(this.ventanaArbol.getBoton1())){
-            String dir = this.ventanaCrearCarpeta.getTxtList().get(0).getText();
-            File directorio=new File(dir);
-           
+            
+            File directorio=new File("C:\\Users\\EstebanRM\\Desktop\\Esteban\\universidad\\carpeta modificada");
+            
             this.ventanaArbol.mostrarArbol(directorio.listFiles(), this.ventanaArbol.getPrincipal());
+            
         }
     }
     

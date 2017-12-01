@@ -5,6 +5,7 @@
  */
 package vista;
 
+import controlador.EventoVentanaArbol;
 import controlador.GestionDato;
 import java.awt.BorderLayout;
 import java.awt.GridLayout;
@@ -49,10 +50,11 @@ public class VentanaArbol extends JFrame{
         panelBotones.add(this.boton1);
         
         this.principal = new DefaultMutableTreeNode("C:\\Users\\EstebanRM\\Desktop\\Esteban\\universidad\\carpeta modificada");
+        
         this.modeloArbol = new DefaultTreeModel(this.principal);
         this.arbol = new JTree(this.modeloArbol);
         this.scroll = new JScrollPane(this.arbol);
-        
+        this.boton1.addActionListener(new EventoVentanaArbol(this));
         this.panelPrincipal.add(this.scroll,BorderLayout.CENTER);
         
         
@@ -61,6 +63,7 @@ public class VentanaArbol extends JFrame{
          this.add(this.panelPrincipal);
     }
     public void mostrarArbol(File[] a, DefaultMutableTreeNode principal){
+        System.out.println("mostar Arbol");
         for(File c:a){
             if(c.isDirectory()){
                 this.nodo= new DefaultMutableTreeNode(c.getPath());
