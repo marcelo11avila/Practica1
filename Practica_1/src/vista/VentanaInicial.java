@@ -59,6 +59,7 @@ public class VentanaInicial extends JFrame{
         this.menuItemList.add(new JMenuItem("Borrar Archivo"));    
         
         this.menu4= new JMenu("Mostrar");
+        this.menuItemList.add(new JMenuItem("Arbol"));
         
         this.setContentPane(escritorio);
         this.setJMenuBar(barraMenu);
@@ -77,6 +78,7 @@ public class VentanaInicial extends JFrame{
         this.menu3.add(this.menuItemList.get(5));
         
         this.barraMenu.add(menu4);
+        this.menu4.add(this.menuItemList.get(6));
         
         this.menuItemList.get(0).addActionListener(new EventoVentanaInicial(this));
         this.menuItemList.get(1).addActionListener(new EventoVentanaInicial(this));
@@ -84,7 +86,17 @@ public class VentanaInicial extends JFrame{
         this.menuItemList.get(3).addActionListener(new EventoVentanaInicial(this));
         this.menuItemList.get(4).addActionListener(new EventoVentanaInicial(this));
         this.menuItemList.get(5).addActionListener(new EventoVentanaInicial(this));
+        this.menuItemList.get(6).addActionListener(new EventoVentanaInicial(this));
+                
         
+    }
+
+    public JMenu getMenu4() {
+        return menu4;
+    }
+
+    public void setMenu4(JMenu menu4) {
+        this.menu4 = menu4;
     }
 
     public JDesktopPane getEscritorio() {

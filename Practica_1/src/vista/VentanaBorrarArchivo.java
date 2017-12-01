@@ -37,7 +37,7 @@ public class VentanaBorrarArchivo extends JFrame{
         this.gD=gD;
         this.iniciaComponentes();
         this.setLocation(875, 50);
-        this.setSize(225, 125);
+        this.setSize(350, 200);
     }
 
     public void iniciaComponentes()

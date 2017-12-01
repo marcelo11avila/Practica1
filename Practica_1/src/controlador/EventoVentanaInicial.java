@@ -7,6 +7,7 @@ package controlador;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import vista.VentanaArbol;
 import vista.VentanaBorrarArchivo;
 import vista.VentanaBorrarCarpeta_1;
 import vista.VentanaCrearArchivo;
@@ -68,6 +69,11 @@ public class EventoVentanaInicial implements ActionListener{
             vBA.setVisible(true);
 
     }
+        if(ae.getSource().equals(this.ventanaInicial.getMenuItemList().get(6))){
+            System.out.println("ventana arbol");
+            VentanaArbol vA= new VentanaArbol(this.ventanaInicial.getgD());
+            vA.setVisible(true);
+        }
     
 }
     }
