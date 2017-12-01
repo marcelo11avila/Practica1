@@ -7,6 +7,8 @@ package controlador;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import vista.VentanaBorrarArchivo;
+import vista.VentanaBorrarCarpeta_1;
 import vista.VentanaCrearArchivo;
 import vista.VentanaCrearCarpeta;
 import vista.VentanaInicial;
@@ -50,12 +52,17 @@ public class EventoVentanaInicial implements ActionListener{
             vMC.setVisible(true);
            
         }
-       /* if(ae.getSource().equals(this.ventanaInicial.getMenuItemList().get(3))){
-            VentanaModifArchivo vCA = new  VentanaModifArchivo(this.ventanaInicial.getgD());
-            vCA.setVisible(true);
-            this.ventanaInicial.getEscritorio().add(vCA);
+       if(ae.getSource().equals(this.ventanaInicial.getMenuItemList().get(4))){
+            VentanaBorrarCarpeta_1 vB = new VentanaBorrarCarpeta_1(this.ventanaInicial.getgD());
+            vB.setVisible(true);
+            
         }
-*/
+       
+        if(ae.getSource().equals(this.ventanaInicial.getMenuItemList().get(5))){
+            VentanaBorrarArchivo vBA = new VentanaBorrarArchivo(this.ventanaInicial.getgD());
+            vBA.setVisible(true);
+
     }
     
 }
+    }
