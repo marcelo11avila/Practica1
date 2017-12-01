@@ -10,6 +10,8 @@ import java.awt.event.ActionListener;
 import vista.VentanaCrearArchivo;
 import vista.VentanaCrearCarpeta;
 import vista.VentanaInicial;
+import vista.VentanaModifArchivo;
+import vista.VentanaModifCarpeta;
 
 /**
  *
@@ -35,13 +37,24 @@ public class EventoVentanaInicial implements ActionListener{
         if(ae.getSource().equals(this.ventanaInicial.getMenuItemList().get(0))){
             VentanaCrearCarpeta vCC = new  VentanaCrearCarpeta(this.ventanaInicial.getgD());
             vCC.setVisible(true);
-            this.ventanaInicial.getEscritorio().add(vCC);
+           
         }
         if(ae.getSource().equals(this.ventanaInicial.getMenuItemList().get(1))){
             VentanaCrearArchivo vCA = new  VentanaCrearArchivo(this.ventanaInicial.getgD());
             vCA.setVisible(true);
+           
+        }
+        if(ae.getSource().equals(this.ventanaInicial.getMenuItemList().get(2))){
+            VentanaModifCarpeta vMC = new  VentanaModifCarpeta(this.ventanaInicial.getgD());
+            vMC.setVisible(true);
+           
+        }
+       /* if(ae.getSource().equals(this.ventanaInicial.getMenuItemList().get(3))){
+            VentanaModifArchivo vCA = new  VentanaModifArchivo(this.ventanaInicial.getgD());
+            vCA.setVisible(true);
             this.ventanaInicial.getEscritorio().add(vCA);
         }
+*/
     }
     
 }

@@ -13,6 +13,7 @@ import java.awt.LayoutManager;
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JButton;
+import javax.swing.JFrame;
 import javax.swing.JInternalFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -26,7 +27,7 @@ import modelo.Carpeta;
  *
  * @author Estudiante
  */
-public class VentanaCrearCarpeta extends JInternalFrame{
+public class VentanaCrearCarpeta extends JFrame{
     private List<JLabel> etiList;
     private List<JTextField> txtList;
     private JButton boton1;
@@ -40,10 +41,10 @@ public class VentanaCrearCarpeta extends JInternalFrame{
     private JScrollPane scroll;
     
      public VentanaCrearCarpeta(GestionDato gD) {
-        super("Crear Carpeta",true,true,true,true);
+        super("Crear Carpeta");
         this.gD=gD;
         this.iniciaComponentes();
-        this.setLocation(0, 0);
+        
         this.setSize(325, 325);
     }
      public void iniciaComponentes()
@@ -57,25 +58,29 @@ public class VentanaCrearCarpeta extends JInternalFrame{
         this.txtList.add(new JTextField());
        
         this.boton1 = new JButton("Crear");
-        this.boton2 = new JButton("Limpriar");
+        this.boton2 = new JButton("Limpiar");
         
         LayoutManager disenioPrincipal = new BorderLayout();
         this.panelPrincipal = new JPanel(disenioPrincipal);
         LayoutManager disenioSup = new GridLayout(5,2);
+        LayoutManager disenioBoton=new GridLayout(1,2);
         JPanel panelSup = new JPanel(disenioSup);
-        
+        JPanel panelBotones = new JPanel(disenioBoton);
         for(int i=0;i<2;i++)
         {
             panelSup.add(this.etiList.get(i));
             panelSup.add(this.txtList.get(i));
         }
         
-        panelSup.add(this.boton1);
+        panelBotones.add(this.boton1);
+        panelBotones.add(this.boton2);
+        
+        panelSup.add(panelBotones);
         this.panelPrincipal.add(panelSup,BorderLayout.NORTH);
         
         this.encabezado = new Object[2];
         this.encabezado[0] = "carpeta destino";
-        this.encabezado[1] = "combre carpeta";
+        this.encabezado[1] = "Nombre carpeta";
         
         this.datos = this.cargaDatosTabla(this.gD.getCrearCarpetaList().size(),2);
         this.modeloTabla = new DefaultTableModel(this.datos,this.encabezado);
@@ -85,6 +90,7 @@ public class VentanaCrearCarpeta extends JInternalFrame{
         this.panelPrincipal.add(this.scroll,BorderLayout.CENTER);
         
         this.boton1.addActionListener(new EventoVentanaCrearCarpeta(this));
+        this.boton2.addActionListener(new EventoVentanaCrearCarpeta(this));
         
         this.add(this.panelPrincipal);
     }

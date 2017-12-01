@@ -15,7 +15,8 @@ import vista.VentanaCrearCarpeta;
  *
  * @author Estudiante
  */
-public class EventoVentanaCrearCarpeta implements ActionListener{
+public class EventoVentanaCrearCarpeta implements ActionListener {
+
     private VentanaCrearCarpeta ventanaCrearCarpeta;
 
     public EventoVentanaCrearCarpeta(VentanaCrearCarpeta ventanaCrearCarpeta) {
@@ -29,25 +30,35 @@ public class EventoVentanaCrearCarpeta implements ActionListener{
     public void setVentanaCrearCarpeta(VentanaCrearCarpeta ventanaCrearCarpeta) {
         this.ventanaCrearCarpeta = ventanaCrearCarpeta;
     }
-    
-    
-    
+
     @Override
     public void actionPerformed(ActionEvent ae) {
-        String cD = this.ventanaCrearCarpeta.getTxtList().get(0).getText();
-        String nC = this.ventanaCrearCarpeta.getTxtList().get(1).getText();
-            
-        Carpeta cC = new Carpeta(cD, nC);
-        
-        File directorio=new File(cD+"\\"+nC);
-        if(!directorio.exists()){
-        directorio.mkdir();
-        }    
-        this.ventanaCrearCarpeta.getgD().addcrearCarpeta(cC);    
-        
-        Object [][] dato1=this.ventanaCrearCarpeta.cargaDatosTabla(this.ventanaCrearCarpeta.getgD().getCrearCarpetaList().size(),2);
-        this.ventanaCrearCarpeta.setDatos(dato1);
-        this.ventanaCrearCarpeta.getModeloTabla().setDataVector(this.ventanaCrearCarpeta.getDatos(),this.ventanaCrearCarpeta.getEncabezado());
-    }
+        if (ae.getSource().equals(this.ventanaCrearCarpeta.getBoton1())) {
+            System.out.println("entra ahora");
+            String cD = this.ventanaCrearCarpeta.getTxtList().get(0).getText();
+            String nC = this.ventanaCrearCarpeta.getTxtList().get(1).getText();
+
+            Carpeta cC = new Carpeta(cD, nC);
+
+            File directorio = new File(cD + "\\" + nC);
+            if (!directorio.exists()) {
+                directorio.mkdir();
+            }
+            this.ventanaCrearCarpeta.getgD().addcrearCarpeta(cC);
+
+            Object[][] dato1 = this.ventanaCrearCarpeta.cargaDatosTabla(this.ventanaCrearCarpeta.getgD().getCrearCarpetaList().size(), 2);
+            this.ventanaCrearCarpeta.setDatos(dato1);
+            this.ventanaCrearCarpeta.getModeloTabla().setDataVector(this.ventanaCrearCarpeta.getDatos(), this.ventanaCrearCarpeta.getEncabezado());
+        }
     
+
+    
+    
+
+        if(ae.getSource().equals(this.ventanaCrearCarpeta.getBoton2())){
+            this.ventanaCrearCarpeta.getTxtList().get(0).setText("");
+            this.ventanaCrearCarpeta.getTxtList().get(1).setText("");
+           
+        }      
+    }
 }

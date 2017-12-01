@@ -13,6 +13,7 @@ import java.awt.LayoutManager;
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JButton;
+import javax.swing.JFrame;
 import javax.swing.JInternalFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -26,7 +27,7 @@ import modelo.Archivo;
  *
  * @author Estudiante
  */
-public class VentanaCrearArchivo extends JInternalFrame{
+public class VentanaCrearArchivo extends JFrame{
     private List<JLabel> etiList;
     private List<JTextField> txtList;
     private JButton boton1;
@@ -40,7 +41,7 @@ public class VentanaCrearArchivo extends JInternalFrame{
     private JScrollPane scroll;
     
      public VentanaCrearArchivo(GestionDato gD) {
-        super("Crear Archivo",true,true,true,true);
+        super("Crear Archivo");
         this.gD=gD;
         this.iniciaComponentes();
         this.setLocation(325, 0);
@@ -73,6 +74,7 @@ public class VentanaCrearArchivo extends JInternalFrame{
         }
         
         panelSup.add(this.boton1);
+        panelSup.add(this.boton2);
         this.panelPrincipal.add(panelSup,BorderLayout.NORTH);
         
         this.encabezado = new Object[3];

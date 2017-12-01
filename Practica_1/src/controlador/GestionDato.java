@@ -16,6 +16,7 @@ import modelo.Carpeta;
 public class GestionDato {
     private List<Carpeta> crearCarpetaList;
     private List<Archivo> crearArchivoList;
+    
 
     public GestionDato(List<Carpeta> crearCarpetaList, List<Archivo> crearArchivoList) {
         this.crearCarpetaList = crearCarpetaList;
@@ -44,5 +45,20 @@ public class GestionDato {
     
     public boolean addcrearArchivo(Archivo cA){
         return this.crearArchivoList.add(cA);
+    }
+    
+    
+    public String modificar(String cadena){
+        int codigo =0;
+        for(int i=cadena.length()-1;i>0;i--){
+            if(cadena.charAt(i)==92){
+                codigo=i;
+                break;
+            }
+        }
+        System.out.println(codigo);
+        String nuevoDirectorio=cadena.substring(0, codigo);
+         System.out.println(nuevoDirectorio);
+       return  nuevoDirectorio;
     }
 }
